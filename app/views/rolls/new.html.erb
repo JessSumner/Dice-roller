@@ -1,0 +1,12 @@
+Welcome to the Dice Rolling Madhouse. Come on in and roll some dice! 
+
+
+<%= form_tag(rolls_path) do %>
+	<%= label_tag :sides %>
+	<%= number_field_tag :sides, min: 4 %>
+
+	<%= label_tag :number %>
+	<%= number_field_tag :number, min: 1 %>
+
+	<%= submit_tag "Roll 'em up" %>
+<% end %>

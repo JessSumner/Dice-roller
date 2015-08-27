@@ -1,0 +1,22 @@
+<p>
+	You rolled <%= @number %>, <%= @sides %> sided dice. Here are your results...
+</p>
+
+<ul>
+	<% @result.each do |r| %>
+		<li class='<%= "crit" if r==@sides %>'>
+			<%= r %>
+		</li>
+	<% end %>
+</ul>
+
+
+<%= form_tag(rolls_path) do %>
+	<%= label_tag :sides %>
+	<%= number_field_tag :sides, @sides, min: 4 %>
+
+	<%= label_tag :number %>
+	<%= number_field_tag :number, @number, min: 1 %>
+
+	<%= submit_tag "Roll again" %>
+<% end %>
