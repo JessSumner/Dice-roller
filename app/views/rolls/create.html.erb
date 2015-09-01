@@ -1,27 +1,29 @@
-<h1>
-	<p>
-		You rolled <%= @number %>, <%= @sides %> sided dice. Here are your results...
-	</p>
-</h1>
+<div class="table">
+	<h1>
+		<p>
+			You rolled <%= @number %>, <%= @sides %> sided dice. Here are your results...
+		</p>
+	</h1>
 
-<ul>
-	<% @result.each do |r| %>
-		<li class='<%= "crit" if r==@sides %>'>
-			<%= r %>
-		</li>
-	<% end %>
-</ul>
+	<div class="results">
+		<ul>
+			<% @result.each do |r| %>
+				<li class='<%= "crit" if r==@sides %>'>
+					<%= r %>
+				</li>
+			<% end %>
+		</ul>
+	</div>
 
+	<div class="form2">
+		<%= form_tag(rolls_path) do %>
+			<%= label_tag :sides %>
+			<%= number_field_tag :sides, @sides, min: 4, max: 50 %>
 
-<%= form_tag(rolls_path) do %>
-	<%= label_tag :sides %>
-	<%= number_field_tag :sides, @sides, min: 4 %>
+			<%= label_tag :number %>
+			<%= number_field_tag :number, @number, min: 1, max: 20 %>
 
-	<%= label_tag :number %>
-	<%= number_field_tag :number, @number, min: 1 %>
-
-	<%= submit_tag "Roll again" %>
-<% end %>
-
-
-<%= link_to "Home", root_path, class: "btn btn-lg btn-primary" %>
+			<%= submit_tag "Roll again" %>
+		<% end %>
+	</div>
+</div>

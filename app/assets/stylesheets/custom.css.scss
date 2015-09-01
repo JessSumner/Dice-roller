@@ -13,21 +13,52 @@ header {
   min-height: 106px;
   background-color: $red;
   text-align: center;
-
-  .icon {
-    width: 120px;
-    height: 106px;
-    float: left;
-  }
-
-  .icon2 {
-    width: 120px;
-    height: 106px;
-    float: right;
-  }
 }
 
 body {
   background-color: #d1ce9d;
   margin: 0px;
+}
+
+.form {
+  @include span-columns(6);
+  @include omega();
+  @include shift(3);
+}
+
+.table {
+  @include fill-parent();
+  @include row(table);
+}
+
+.form2 {
+  @include span-columns(6);
+  @include reset-display;
+  @include pad();
+}
+
+.results {
+  @include span-columns(6);
+  @include pad();
+}
+
+.icon {
+  width: 120px;
+  height: 106px;
+  float: left;
+}
+
+.icon2 {
+  width: 120px;
+  height: 106px;
+  float: right;
+}
+
+.block-text {
+  @include span-columns(6);
+  @include shift(3);
+}
+
+footer{
+
 }
