@@ -1,0 +1,33 @@
+$red: #d61818;
+$gold: #d1ce9d;
+
+main {
+  @include outer-container;
+}
+  
+header {
+  margin-top: 0;
+  margin-left: 0;
+  margin-right: 0;
+  padding-left: 0;
+  min-height: 106px;
+  background-color: $red;
+  text-align: center;
+
+  .icon {
+    width: 120px;
+    height: 106px;
+    float: left;
+  }
+
+  .icon2 {
+    width: 120px;
+    height: 106px;
+    float: right;
+  }
+}
+
+body {
+  background-color: #d1ce9d;
+  margin: 0px;
+}

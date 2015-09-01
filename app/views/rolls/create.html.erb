@@ -1,6 +1,12 @@
-<p>
-	You rolled <%= @number %>, <%= @sides %> sided dice. Here are your results...
-</p>
+<header>
+	<%= render 'layouts/header' %>
+</header>
+
+<h1>
+	<p>
+		You rolled <%= @number %>, <%= @sides %> sided dice. Here are your results...
+	</p>
+</h1>
 
 <ul>
 	<% @result.each do |r| %>
@@ -20,3 +26,6 @@
 
 	<%= submit_tag "Roll again" %>
 <% end %>
+
+
+<%= link_to "Home", root_path, class: "btn btn-lg btn-primary" %>
