@@ -57,8 +57,25 @@ body {
 .block-text {
   @include span-columns(6);
   @include shift(3);
+  text-align: justify;
 }
 
 footer{
-
+  min-height: 53px;
+  background-color: $red;
+  text-align: center;
+  font-weight: bold;
+  padding-top: 12px;
+  padding-right: 50px;
+  padding-bottom: 0;
+  margin-bottom: 0;
+  margin-top: 150px;
+  ul {
+    float: right;
+    list-style: none;
+    li {
+      float: left;
+      margin-left: 30px;
+    }
+  }
 }
