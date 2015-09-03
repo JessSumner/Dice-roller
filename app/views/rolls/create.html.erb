@@ -7,9 +7,9 @@
 
 	<div class="results">
 		<ul>
-			<% @result.each do |r| %>
-				<li class='<%= "crit" if r==@sides %>'>
-					<%= r %>
+			<% @result.each do |result| %>
+				<li class='<%= "crit" if result==@sides %>'>
+					<%= result %>
 				</li>
 			<% end %>
 		</ul>
