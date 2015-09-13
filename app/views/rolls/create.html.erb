@@ -17,11 +17,7 @@
 
 	<div class="form2">
 		<%= form_tag(rolls_path) do %>
-			<%= label_tag :sides %>
-			<%= number_field_tag :sides, @sides, min: 4, max: 50 %>
-
-			<%= label_tag :number %>
-			<%= number_field_tag :number, @number, min: 1, max: 20 %>
+			<%= render 'rolls/rolls' %>
 
 			<%= submit_tag "Roll again" %>
 		<% end %>
